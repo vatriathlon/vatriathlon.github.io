@@ -1,0 +1,21 @@
+language: go
+go:
+  - '1.7'
+env:
+  global:
+    - SSH_KEY="github_travis"
+    - GIT_NAME="VATriathlon"
+    - GIT_EMAIL="VATriathlon@gmail.com"
+    - SOURCE_DIR="public"
+    - DEPLOY_BRANCH="source"
+    - BUILD_BRANCH="source"
+# before_install:
+#   - openssl aes-256-cbc -K $encrypted_b20e39435737_key -iv $encrypted_b20e39435737_iv
+#     -in github_travis.enc -out github_travis -d
+before_script:
+  - git clone --branch v2 https://github.com/go-yaml/yaml $GOPATH/src/gopkg.in/yaml.v2
+  - go get -u -v github.com/spf13/hugo
+script:
+  - hugo
+after_success:
+  - ./.travis/publish.sh
