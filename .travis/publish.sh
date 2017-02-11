@@ -36,6 +36,7 @@ git config --global user.name "${USER_NAME}"
 ## Repository URL
 GIT_REPOSITORY=$(git config remote.origin.url)
 GIT_REPOSITORY=${GIT_REPOSITORY/git:\/\/github.com\//git@github.com:}".git"
+GIT_REPOSITORY=${GIT_REPOSITORY/git:\/\/github.com\//git@github.com:}
 GIT_REPOSITORY=${GIT_REPOSITORY/https:\/\/github.com\//git@github.com:}
 
 echo "REPO: ${GIT_REPOSITORY}"
