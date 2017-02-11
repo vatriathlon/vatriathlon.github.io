@@ -1,4 +1,4 @@
-baseurl = "https://vatriathlon.com/"
+baseurl = "https://vatriathlon.github.io/"
 languageCode = "fr-FR"
 title = "Villeneuve d'Ascq Triathlon"
 theme = "beautifulhugo"
