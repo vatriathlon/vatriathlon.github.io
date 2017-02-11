@@ -1,0 +1,38 @@
+baseurl = "https://vatriathlon.com/"
+languageCode = "fr-FR"
+title = "Villeneuve d'Ascq Triathlon"
+theme = "beautifulhugo"
+pygmentsUseClasses = true
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
+
+[Params]
+  # logo = "images/logoVatriathlon-green-60x51.png"
+  logo = "images/logoVatriathlon-green-40x34.png"
+#   subtitle = "Pour tout le monde, en loisir ou en compétition"
+
+[Author]
+  #name = "Some Person"
+  email = "villeneuvedascqtriathlon@gmail.com"
+  facebook = "Villeneuve-dAscq-Triathlon-1042307362460241"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Ecole de Tri"
+    url = "/ecole"
+    weight = 2
+
+# [[menu.main]]
+#     name = "Partenaires"
+#     url = "/partenaires"
+#     weight = 3
+
+# [[menu.main]]
+#     name = "Contact"
+#     url = "/contact"
+#     weight = 4
+
