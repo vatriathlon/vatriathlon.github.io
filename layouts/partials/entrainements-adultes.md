@@ -1,0 +1,6 @@
+- Natation
+  - Lundi et mercredi 20h-21h30, Centre Nautique Babylone à Villeneuve-d'Ascq
+  - Jeudi 19h30-20h30, piscine de l'Edhec à Croix
+  - Samedi 8h-9h, Centre Nautique Babylone à Villeneuve-d'Ascq
+- Course à Pied
+  - Mardi 17h30-18h30, stade G. Lemaire à Villeneuve-d'Ascq

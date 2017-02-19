@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 
-  <body>
+<body>
 
-    {{ partial "nav.html" . }}
+  {{ partial "nav.html" . }}
 
-    <header class="header-section ">
-      <div class="intro-header big-img">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="page-heading">
-                <h1>{{.Site.Title}}</h1>
-                {{if .Site.Params.subtitle}}
-                  <span class="page-subheading">{{.Site.Params.subtitle}}</span>
-                {{end}}
-              </div>
+  <header class="header-section ">
+    <div class="intro-header big-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <div class="page-heading">
+              <h1>{{.Site.Title}}</h1>
+              {{if .Site.Params.subtitle}}
+              <span class="page-subheading">{{.Site.Params.subtitle}}</span> {{end}}
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-
-    <div role="main" class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <div class="bs-docs-featurette">
+    <div class="container-fluid news">
+      <div class="row strech">
+        <div class="col-sm-offset-1 col-sm-7 col-xs-12">
+          <h1 class="title">Actualit&eacute;s</h1>
           <div class="posts-list">
-            {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-            {{ range $pag.Pages }}
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 1 }} 
+            {{ range  ($paginator).Pages }}
             <article class="post-preview">
               <a href="{{ .Permalink }}">
-          	  <h2 class="post-title">{{ .Title }}</h2>
-          	
-          	  {{ if .Params.subtitle }}
-          	  <h3 class="post-subtitle">
-          	    {{ .Params.subtitle }}
-          	  </h3>
-          	  {{ end }}  
+                <h2 class="post-title">{{ .Title }}</h2>
+
+                {{ if .Params.subtitle }}
+                <h3 class="post-subtitle">
+                  {{ .Params.subtitle }}
+                </h3>
+                {{ end }}
               </a>
 
               <p class="post-meta">
-                Publié le {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                Publi&eacute; le {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
               </p>
-            
+ 
               <div class="post-entry">
                 {{ .Summary }}
-          	  <a href="{{ .Permalink }}" class="post-read-more">[Lire la suite]</a>
               </div>
-            
-             </article>
+              <div class="post-read-more">
+                <a href="{{ .Permalink }}">[Lire la suite...]</a>
+              </div>
+            </article>
             {{ end }}
           </div>
+        </div>
+      <aside class="col-sm-offset-1 col-sm-3 col-xs-12">
+        {{ partial "posts_navbar.html" . }}
+      </aside>
+    </div>
+  </div>
 
-          {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-          <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-            <li class="previous">
-              <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}">&larr; Newer Posts</a>
-            </li>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-            <li class="next">
-              <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}">Older Posts &rarr;</a>
-            </li>
-            {{ end }}
-          </ul>
-          {{ end }}
+  <div class="bs-docs-featurette container-grey">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-10 col-xs-12">
+          <h2 class="title">Entraînements</h2>
+        </div>
+      </div>
+      <div class="row strech">
+        <div class="col-sm-offset-1 col-sm-5 col-xs-12 trainings">
+          <h2 class="title">Jeunes</h2>
+          {{ partial "entrainements-jeunes.md" | markdownify }}
+        </div>
+        <div class="col-sm-offset-1 col-sm-5 col-xs-12 trainings">
+          <h2 class="title">Adultes</h2>
+          {{ partial "entrainements-adultes.md" | markdownify }}
         </div>
       </div>
     </div>
+  </div>
+  {{ partial "footer.html" . }}
 
-    {{ partial "footer.html" . }}
+</body>
 
-  </body>
 </html>
