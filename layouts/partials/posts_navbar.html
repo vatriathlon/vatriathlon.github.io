@@ -1,9 +1,8 @@
-<h3 class="title">Archives</h3>
 <ul class="pager main-pager">
     {{ range where .Site.Pages "Type" "post" }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
     <li class="next"> 
-        <a href="">Toutes les archives &rarr;</a>
+        <a href="/post/">Toutes les actualit&eacute;s &rarr;</a>
     </li>
 </ul>

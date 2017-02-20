@@ -22,11 +22,10 @@
       </div>
     </div>
   </header>
-
-  <div class="bs-docs-featurette">
+  <div role="main" class="container main-content">
     <div class="container-fluid news">
       <div class="row strech">
-        <div class="col-sm-offset-1 col-sm-7 col-xs-12">
+        <div class="col-sm-8 col-xs-12">
           <h1 class="title">Actualit&eacute;s</h1>
           <div class="posts-list">
             {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 1 }} 
@@ -45,7 +44,7 @@
               <p class="post-meta">
                 Publi&eacute; le {{ .Date.Day }} {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
               </p>
- 
+
               <div class="post-entry">
                 {{ .Summary }}
               </div>
@@ -56,27 +55,29 @@
             {{ end }}
           </div>
         </div>
-      <aside class="col-sm-offset-1 col-sm-3 col-xs-12">
-        {{ partial "posts_navbar.html" . }}
-      </aside>
+        <aside class="col-sm-4 col-xs-12">
+          {{ partial "posts_navbar.html" . }}
+        </aside>
+      </div>
     </div>
   </div>
-
-  <div class="bs-docs-featurette container-grey">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-xs-12">
-          <h2 class="title">Entraînements</h2>
+  <div role="main" class="container-grey">
+    <div class="container main-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <h2 class="title">Entraînements</h2>
+          </div>
         </div>
-      </div>
-      <div class="row strech">
-        <div class="col-sm-offset-1 col-sm-5 col-xs-12 trainings">
-          <h2 class="title">Jeunes</h2>
-          {{ partial "entrainements-jeunes.md" | markdownify }}
-        </div>
-        <div class="col-sm-offset-1 col-sm-5 col-xs-12 trainings">
-          <h2 class="title">Adultes</h2>
-          {{ partial "entrainements-adultes.md" | markdownify }}
+        <div class="row strech">
+          <div class="col-sm-6 col-xs-12 trainings">
+            <h2 class="title">Jeunes</h2>
+            {{ partial "entrainements-jeunes.md" | markdownify }}
+          </div>
+          <div class="col-sm-6 col-xs-12 trainings">
+            <h2 class="title">Adultes</h2>
+            {{ partial "entrainements-adultes.md" | markdownify }}
+          </div>
         </div>
       </div>
     </div>

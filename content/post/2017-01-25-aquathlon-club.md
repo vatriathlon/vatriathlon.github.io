@@ -3,8 +3,6 @@ date = "2017-01-25"
 title = "Aquathlon du Club - 11 Mars 2017"
 +++
 
-![Image](../../images/affiche-aquathlon.jpg)
-
 Le 11 mars 2017 est organisé, en partenariat avec l'EDHEC, le premier aquathlon du club.
 
 Quatre courses sont prévues dans l'organisation : 
@@ -15,6 +13,8 @@ Quatre courses sont prévues dans l'organisation :
 - Course 6-9 ans (50m/100m) à 17h30. 
 
 <!--more-->
+![Image](../../images/affiche-aquathlon.jpg)
+
 Des équipes en relais peuvent également s'inscrire.
 Cette compétition aura lieu sur le site de l'EDHEC, Rue Verte à Croix. 
 
