@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 
-<div class="container">
+<div class="container-fluid news">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="col-sm-8 col-xs-12">
       <article role="main" class="blog-post">
           {{ .Content }}
       </article>
@@ -10,7 +10,7 @@
       <ul class="pager blog-pager">
         {{ if .PrevInSection }}
         <li class="previous">
-          <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; Precedent</a>
+          <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; Pr&eacute;c&eacute;dent</a>
         </li>
         {{ end }}
         {{ if .NextInSection }}
@@ -27,5 +27,8 @@
       {{ end }}
 
     </div>
+    <aside class="col-sm-4 col-xs-12">
+      {{ partial "posts_navbar.html" . }}
+    </aside>
   </div>
 </div>

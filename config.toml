@@ -16,15 +16,15 @@ pygmentsUseClasses = true
   email = "villeneuvedascqtriathlon@gmail.com"
   facebook = "Villeneuve-dAscq-Triathlon-1042307362460241"
 
-[[menu.main]]
-    name = "Blog"
-    url = "/"
-    weight = 1
+# [[menu.main]]
+#     name = "Blog"
+#     url = "/"
+#     weight = 1
 
-[[menu.main]]
-    name = "Ecole de Tri"
-    url = "/ecole"
-    weight = 2
+# [[menu.main]]
+#     name = "Ecole de Tri"
+#     url = "/ecole"
+#     weight = 2
 
 # [[menu.main]]
 #     name = "Partenaires"
