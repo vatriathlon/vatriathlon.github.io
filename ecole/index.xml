@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ecoles on Villeneuve d&#39;Ascq Triathlon</title>
-    <link>https://vatriathlon.com/ecole/index.xml</link>
+    <link>https://vatriathlon.github.io/ecole/index.xml</link>
     <description>Recent content in Ecoles on Villeneuve d&#39;Ascq Triathlon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <managingEditor>villeneuvedascqtriathlon@gmail.com</managingEditor>
     <webMaster>villeneuvedascqtriathlon@gmail.com</webMaster>
-    <atom:link href="https://vatriathlon.com/ecole/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vatriathlon.github.io/ecole/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>L&#39;école de Triathlon</title>
-      <link>https://vatriathlon.com/ecole/</link>
+      <link>https://vatriathlon.github.io/ecole/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>villeneuvedascqtriathlon@gmail.com</author>
-      <guid>https://vatriathlon.com/ecole/</guid>
+      <guid>https://vatriathlon.github.io/ecole/</guid>
       <description>
 
 &lt;h1 id=&#34;les-créneaux&#34;&gt;Les créneaux&lt;/h1&gt;
