@@ -1,1 +1,0 @@
-Le site du clib de Triathlon de Villeneuve d'Ascq.
