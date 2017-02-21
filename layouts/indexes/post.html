@@ -18,7 +18,7 @@
     </header>
     <div class="container-fluid">
       <div class="posts-list col-sm-8 col-sm-offset-2 col-xs-12">
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 5 }} {{ range ($paginator).Pages }}
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post")}} {{ range ($paginator).Pages }}
         <article class="post-preview">
           <a href="{{ .Permalink }}">
             <h2 class="post-title">{{ .Title }}</h2>
